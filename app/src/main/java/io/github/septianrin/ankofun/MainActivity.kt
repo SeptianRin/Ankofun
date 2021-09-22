@@ -13,11 +13,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         //init UI val
         val btnRoll : Button = findViewById(R.id.btn_roll)
-        btnRoll.setOnClickListener{rollDice()}
+        val ivDice : ImageView = findViewById(R.id.iv_dice)
+        val ivDice2 : ImageView = findViewById(R.id.iv_dice2)
+        btnRoll.setOnClickListener{rollDice(ivDice); rollDice(ivDice2)}
     }
 
-    private fun rollDice() {
-        val ivDice : ImageView = findViewById(R.id.iv_dice)
+    private fun rollDice(dice : ImageView) {
         val randomInt = (1..6).random()
         val drawableResource = when(randomInt){
             1 -> R.drawable.dice_1
@@ -27,6 +28,6 @@ class MainActivity : AppCompatActivity() {
             5 -> R.drawable.dice_5
             else -> R.drawable.dice_6
         }
-        ivDice.setImageResource(drawableResource)
+        dice.setImageResource(drawableResource)
     }
 }
