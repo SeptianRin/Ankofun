@@ -13,9 +13,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         //init UI val
         val btnRoll : Button = findViewById(R.id.btn_roll)
+        val btnReset : Button = findViewById(R.id.btn_reset)
         val ivDice : ImageView = findViewById(R.id.iv_dice)
         val ivDice2 : ImageView = findViewById(R.id.iv_dice2)
         btnRoll.setOnClickListener{rollDice(ivDice); rollDice(ivDice2)}
+        btnReset.setOnClickListener{ivDice.setImageResource(R.drawable.empty_dice)
+            ivDice2.setImageResource(R.drawable.empty_dice)}
     }
 
     private fun rollDice(dice : ImageView) {
