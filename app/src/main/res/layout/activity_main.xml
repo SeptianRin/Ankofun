@@ -21,5 +21,11 @@
         android:layout_height="wrap_content"
         android:text="@string/roll_label"
         android:layout_gravity="center_horizontal"/>
+    <Button
+        android:id="@+id/btn_count_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/count_up_label"
+        android:layout_gravity="center_horizontal"/>
 
 </LinearLayout>
