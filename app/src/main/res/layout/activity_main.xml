@@ -8,24 +8,19 @@
     android:orientation="vertical"
     android:layout_gravity="center_vertical">
 
-    <TextView
-        android:id="@+id/tv_result"
+    <ImageView
+        android:id="@+id/iv_dice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
         android:layout_gravity="center_horizontal"
-        android:textSize="30sp"/>
+        app:srcCompat="@drawable/empty_dice"
+        tools:src= "@drawable/dice_1"/>
     <Button
         android:id="@+id/btn_roll"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/roll_label"
         android:layout_gravity="center_horizontal"/>
-    <Button
-        android:id="@+id/btn_count_up"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/count_up_label"
-        android:layout_gravity="center_horizontal"/>
+
 
 </LinearLayout>
